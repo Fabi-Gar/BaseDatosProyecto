@@ -20,15 +20,19 @@ namespace BaseDatosProyecto.modelo
 
             public static void abrir_conexion()
             {
-                //Este es el nombre de conexion para conectar a la base de datos
-                conexion = new SqlConnection("Data Source=34.16.213.5; Initial Catalog =prueba; Persist Security Info = True; User ID = " + user + "; Password = " + pass + "; TrustServerCertificate = True");
-
-                //Este if cambia el estado de conexion cerrada a abierta
-                if (conexion.State == System.Data.ConnectionState.Closed)
+                try
                 {
-                    conexion.Open();
+                    //Este es el nombre de conexion para conectar a la base de datos
+                    conexion = new SqlConnection("Data Source=34.16.213.5; Initial Catalog =BaseDatosProyecto; Persist Security Info = True; User ID = " + user + "; Password = " + pass + "; TrustServerCertificate = True");
+
+                    //Este if cambia el estado de conexion cerrada a abierta
+                    if (conexion.State == System.Data.ConnectionState.Closed)
+                    {
+                        conexion.Open();
+                    }
+                    else { MessageBox.Show("error"); }
                 }
-                else { MessageBox.Show("error"); }
+                catch (Exception ex) { MessageBox.Show("error " + ex); }
             }
 
             //Con este metodo se obtiene el estado de la conexion

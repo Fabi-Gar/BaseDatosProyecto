@@ -12,9 +12,9 @@ using System.Runtime.InteropServices;
 
 namespace BaseDatosProyecto
 {
-    public partial class MenuPrincipal : Form
+    public partial class Plantilla : Form
     {
-        public MenuPrincipal()
+        public Plantilla()
         {
             InitializeComponent();
         }

@@ -50,25 +50,52 @@
     <Compile Include="modelo\obtenerDatosTablas.cs" />
     <Compile Include="modelo\procedimientoSQL.cs" />
     <Compile Include="modelo\sqlModelos.cs" />
+    <Compile Include="vista\frmAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\frmAdministrador.Designer.cs">
+      <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\frmTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\frmTecnico.Designer.cs">
+      <DependentUpon>frmTecnico.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\MenuPrincipal.cs">
+    <Compile Include="vista\Plantilla.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vista\MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <Compile Include="vista\Plantilla.Designer.cs">
+      <DependentUpon>Plantilla.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="vista\frmAdministrador.resx">
+      <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vista\MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="vista\frmTecnico.resx">
+      <DependentUpon>frmTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Plantilla.resx">
+      <DependentUpon>Plantilla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,12 +120,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="imagenes\ActualizarServicio.png" />
     <Content Include="imagenes\cerrar.png" />
+    <Content Include="imagenes\estadoServicio.png" />
     <Content Include="imagenes\imagenServicio.png" />
     <Content Include="imagenes\IniciarSesion.png" />
     <Content Include="imagenes\Maximizar.png" />
     <Content Include="imagenes\Minimizar.png" />
+    <Content Include="imagenes\NuevoUsuario.png" />
     <Content Include="imagenes\Restaurar.png" />
+    <Content Include="imagenes\Servicios.png" />
+    <Content Include="imagenes\Solucion.png" />
+    <Content Include="imagenes\TecnicoLogo.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
