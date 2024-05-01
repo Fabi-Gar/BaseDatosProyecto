@@ -23,7 +23,7 @@ namespace BaseDatosProyecto.modelo
                 try
                 {
                     //Este es el nombre de conexion para conectar a la base de datos
-                    conexion = new SqlConnection("Data Source=34.16.213.5; Initial Catalog =BaseDatosProyecto; Persist Security Info = True; User ID = " + user + "; Password = " + pass + "; TrustServerCertificate = True");
+                    conexion = new SqlConnection("Data Source=34.16.213.5; Initial Catalog =SoporteTecnico; Persist Security Info = True; User ID = " + user + "; Password = " + pass + "; TrustServerCertificate = True");
 
                     //Este if cambia el estado de conexion cerrada a abierta
                     if (conexion.State == System.Data.ConnectionState.Closed)
@@ -34,6 +34,10 @@ namespace BaseDatosProyecto.modelo
                 }
                 catch (Exception ex) { MessageBox.Show("error " + ex); }
             }
+
+
+
+
 
             //Con este metodo se obtiene el estado de la conexion
             public static System.Data.ConnectionState ObtenerEstadoConexion()
@@ -59,10 +63,10 @@ namespace BaseDatosProyecto.modelo
                     if (rs.HasRows)
                     {
                         rs.Read();
-                        rolUsuario = rs.GetValue(0).ToString();
+                        rolUsuario = rs.GetString(0);
                     }
                 }
-                catch (Exception ex) { }
+                catch (Exception ex) { Console.Write(ex); }
 
                 finally { cmd.Dispose(); }
 

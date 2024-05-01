@@ -25,12 +25,24 @@ namespace BaseDatosProyecto
             frmTecnico vistaTecnico = new frmTecnico();
             frmCliente vistaCliente = new frmCliente();
             Plantilla plantilla = new Plantilla();
+            frmActualizarServicio VistaActualizarServicio = new frmActualizarServicio();
+            frmEstadoServicio VistaEstadoServicio = new frmEstadoServicio();
+            frmNuevoUsuario VistaNuevoUsuario = new frmNuevoUsuario();
+            frmServicios VistaServicios = new frmServicios();
+            frmSolicitarServicio VistaSolicitarServicio = new frmSolicitarServicio();
+            frmSoluciones VistaSoluciones = new frmSoluciones();
+
 
             sqlModelos Conexiones = new sqlModelos();
             procedimientoSQL procedimientoSQL = new procedimientoSQL();
             obtenerDatosTablas tablasSql = new obtenerDatosTablas();
 
-            manejoProgramaControl controlador = new manejoProgramaControl(vistaInicioSesion, vistaAdministrador, vistaTecnico, vistaCliente, plantilla, tablasSql, procedimientoSQL, Conexiones);
+            manejoProgramaControl controlador = new 
+                manejoProgramaControl(vistaInicioSesion,
+                vistaAdministrador,vistaTecnico,vistaCliente,
+                VistaSolicitarServicio,VistaEstadoServicio,VistaServicios,
+                VistaActualizarServicio,VistaSoluciones,VistaNuevoUsuario,
+                plantilla,tablasSql,procedimientoSQL,Conexiones);
 
 
 

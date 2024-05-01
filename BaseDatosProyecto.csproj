@@ -50,6 +50,12 @@
     <Compile Include="modelo\obtenerDatosTablas.cs" />
     <Compile Include="modelo\procedimientoSQL.cs" />
     <Compile Include="modelo\sqlModelos.cs" />
+    <Compile Include="vista\VistasBotones\frmActualizarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmActualizarServicio.Designer.cs">
+      <DependentUpon>frmActualizarServicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\frmAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,36 @@
     </Compile>
     <Compile Include="vista\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmEstadoServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmEstadoServicio.Designer.cs">
+      <DependentUpon>frmEstadoServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmNuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmNuevoUsuario.Designer.cs">
+      <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmServicios.Designer.cs">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmSolicitarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmSolicitarServicio.Designer.cs">
+      <DependentUpon>frmSolicitarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmSoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmSoluciones.Designer.cs">
+      <DependentUpon>frmSoluciones.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\frmTecnico.cs">
       <SubType>Form</SubType>
@@ -106,6 +142,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vista\VistasBotones\frmActualizarServicio.resx">
+      <DependentUpon>frmActualizarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\VistasBotones\frmEstadoServicio.resx">
+      <DependentUpon>frmEstadoServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\VistasBotones\frmNuevoUsuario.resx">
+      <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\VistasBotones\frmServicios.resx">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\VistasBotones\frmSolicitarServicio.resx">
+      <DependentUpon>frmSolicitarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\VistasBotones\frmSoluciones.resx">
+      <DependentUpon>frmSoluciones.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

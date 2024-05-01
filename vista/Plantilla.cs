@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Runtime.InteropServices;
+using BaseDatosProyecto.vista;
 
 namespace BaseDatosProyecto
 {
@@ -54,5 +55,7 @@ namespace BaseDatosProyecto
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+  
     }
 }
