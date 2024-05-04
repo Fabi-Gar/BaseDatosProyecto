@@ -89,5 +89,31 @@ namespace BaseDatosProyecto.modelo
             return tablaEdificios;
 
         }
+
+        public DataTable VerTodosServiciosSolicitados()
+        {
+            DataTable tablaCuentas = new DataTable();
+            try
+            {
+                Miconexion.abrir_conexion();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "VerTodosServiciosSolicitados";
+                cmd.Connection = Miconexion.conexion;
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                adapter.Fill(tablaCuentas);
+                Miconexion.conexion.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Algo salió mal: " + ex.Message);
+            }
+
+            return tablaCuentas;
+
+        }
     }
 }

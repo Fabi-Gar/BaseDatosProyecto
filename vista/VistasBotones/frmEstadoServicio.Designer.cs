@@ -34,9 +34,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1064, 573);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEstadoServicio";
             this.Text = "frmEstadoServicio";
+            this.Load += new System.EventHandler(this.frmEstadoServicio_Load);
             this.ResumeLayout(false);
 
         }

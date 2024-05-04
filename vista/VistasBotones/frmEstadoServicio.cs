@@ -16,5 +16,10 @@ namespace BaseDatosProyecto.vista
         {
             InitializeComponent();
         }
+
+        private void frmEstadoServicio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -87,5 +87,30 @@ namespace BaseDatosProyecto.modelo
                 MessageBox.Show("Algo salió mal " + ex.Message);
             }
         }
+
+        public static void SolicitarServicio(string Descripcion, string SolicitanteDpi, DateTime fecha )
+        {
+            try
+            {
+                Miconexion.abrir_conexion();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SolicitarServicio";
+                cmd.Connection = Miconexion.conexion;
+
+
+                cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
+                cmd.Parameters.Add(new SqlParameter("@SolicitanteDPI", SolicitanteDpi));
+                cmd.Parameters.Add(new SqlParameter("@FechaSolicitud", fecha));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Servicio Agregado Exitosamente");
+                Miconexion.conexion.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Algo salió mal " + ex.Message);
+            }
+        }
     }
 }

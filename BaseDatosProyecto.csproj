@@ -50,6 +50,9 @@
     <Compile Include="modelo\obtenerDatosTablas.cs" />
     <Compile Include="modelo\procedimientoSQL.cs" />
     <Compile Include="modelo\sqlModelos.cs" />
+    <Compile Include="vista\Botones Personalizados\datePickerModificado.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="vista\VistasBotones\frmActualizarServicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +153,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="vista\VistasBotones\frmActualizarServicio.resx">
       <DependentUpon>frmActualizarServicio.cs</DependentUpon>
@@ -199,6 +203,8 @@
     <Content Include="imagenes\Servicios.png" />
     <Content Include="imagenes\Solucion.png" />
     <Content Include="imagenes\TecnicoLogo.png" />
+    <None Include="Resources\CalendarioNegro.png" />
+    <None Include="Resources\CalendarioBlanco.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
