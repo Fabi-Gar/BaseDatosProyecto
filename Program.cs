@@ -1,6 +1,7 @@
 ﻿using BaseDatosProyecto.controlador;
 using BaseDatosProyecto.modelo;
 using BaseDatosProyecto.vista;
+using BaseDatosProyecto.vista.VistasBotones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,7 @@ namespace BaseDatosProyecto
             frmServicios VistaServicios = new frmServicios();
             frmSolicitarServicio VistaSolicitarServicio = new frmSolicitarServicio();
             frmSoluciones VistaSoluciones = new frmSoluciones();
+            frmAgregarEdificioOficina VistaEdificioOficina = new frmAgregarEdificioOficina();
 
 
             sqlModelos Conexiones = new sqlModelos();
@@ -38,7 +40,7 @@ namespace BaseDatosProyecto
             obtenerDatosTablas tablasSql = new obtenerDatosTablas();
 
             manejoProgramaControl controlador = new 
-                manejoProgramaControl(vistaInicioSesion,
+                manejoProgramaControl(VistaEdificioOficina,vistaInicioSesion,
                 vistaAdministrador,vistaTecnico,vistaCliente,
                 VistaSolicitarServicio,VistaEstadoServicio,VistaServicios,
                 VistaActualizarServicio,VistaSoluciones,VistaNuevoUsuario,

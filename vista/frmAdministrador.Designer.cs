@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministrador));
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAgregarEdificio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -39,24 +41,30 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(1256, 7);
+            this.btnSalir.Location = new System.Drawing.Point(1674, 9);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.Location = new System.Drawing.Point(1194, 7);
+            this.btnMinimizar.Location = new System.Drawing.Point(1592, 9);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             // 
             // btnMaximizar
             // 
-            this.btnMaximizar.Location = new System.Drawing.Point(1225, 7);
+            this.btnMaximizar.Location = new System.Drawing.Point(1633, 9);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             // 
             // BarraSuperior
             // 
-            this.BarraSuperior.Size = new System.Drawing.Size(1284, 38);
+            this.BarraSuperior.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BarraSuperior.Size = new System.Drawing.Size(1712, 47);
             // 
             // MenuVertical
             // 
+            this.MenuVertical.Controls.Add(this.btnAgregarEdificio);
             this.MenuVertical.Controls.Add(this.label1);
-            this.MenuVertical.Size = new System.Drawing.Size(220, 573);
+            this.MenuVertical.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.MenuVertical.Size = new System.Drawing.Size(293, 705);
             this.MenuVertical.Controls.SetChildIndex(this.btnSolicitarServicio, 0);
             this.MenuVertical.Controls.SetChildIndex(this.btnEstadoServicio, 0);
             this.MenuVertical.Controls.SetChildIndex(this.btnServicios, 0);
@@ -64,10 +72,12 @@
             this.MenuVertical.Controls.SetChildIndex(this.btnSoluciones, 0);
             this.MenuVertical.Controls.SetChildIndex(this.btnNuevoUsuario, 0);
             this.MenuVertical.Controls.SetChildIndex(this.label1, 0);
+            this.MenuVertical.Controls.SetChildIndex(this.btnAgregarEdificio, 0);
             // 
             // PanelCentral
             // 
-            this.PanelCentral.Size = new System.Drawing.Size(1064, 573);
+            this.PanelCentral.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.PanelCentral.Size = new System.Drawing.Size(1419, 705);
             // 
             // btnSolicitarServicio
             // 
@@ -76,7 +86,8 @@
             // 
             // btnRestaurar
             // 
-            this.btnRestaurar.Location = new System.Drawing.Point(1225, 7);
+            this.btnRestaurar.Location = new System.Drawing.Point(1034, 9);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             // 
             // btnEstadoServicio
             // 
@@ -102,23 +113,45 @@
             // 
             this.btnNuevoUsuario.FlatAppearance.BorderSize = 0;
             this.btnNuevoUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(115)))));
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(4, 599);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(40, 18);
+            this.label1.Location = new System.Drawing.Point(53, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 24);
+            this.label1.Size = new System.Drawing.Size(175, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "Administrador";
             // 
+            // btnAgregarEdificio
+            // 
+            this.btnAgregarEdificio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarEdificio.FlatAppearance.BorderSize = 0;
+            this.btnAgregarEdificio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(115)))));
+            this.btnAgregarEdificio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarEdificio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEdificio.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarEdificio.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarEdificio.Image")));
+            this.btnAgregarEdificio.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarEdificio.Location = new System.Drawing.Point(0, 503);
+            this.btnAgregarEdificio.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarEdificio.Name = "btnAgregarEdificio";
+            this.btnAgregarEdificio.Size = new System.Drawing.Size(293, 75);
+            this.btnAgregarEdificio.TabIndex = 8;
+            this.btnAgregarEdificio.Text = "Agregar Edi o Ofi";
+            this.btnAgregarEdificio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarEdificio.UseVisualStyleBackColor = true;
+            // 
             // frmAdministrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 611);
+            this.ClientSize = new System.Drawing.Size(1712, 752);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "frmAdministrador";
             this.Text = "frmAdministrador";
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
@@ -135,5 +168,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnAgregarEdificio;
     }
 }

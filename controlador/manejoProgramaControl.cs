@@ -1,5 +1,6 @@
 ﻿using BaseDatosProyecto.modelo;
 using BaseDatosProyecto.vista;
+using BaseDatosProyecto.vista.VistasBotones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace BaseDatosProyecto.controlador
         frmActualizarServicio VistaActualizarServicio;
         frmSoluciones VistaSoluciones;
         frmNuevoUsuario VistaUsuarioNuevo;
+        frmAgregarEdificioOficina VistaEdificioOficina;
         
         Plantilla laPlantillaxD;
 
@@ -30,7 +32,7 @@ namespace BaseDatosProyecto.controlador
         procedimientoSQL procedimientosAlmacenados;
         sqlModelos conexion;
 
-        public manejoProgramaControl(frmInicioSesion vistaInicioSesion, frmAdministrador vistaAdministrador, frmTecnico vistaTecnico, frmCliente vistaCliente, frmSolicitarServicio vistaSolicitarServicio, frmEstadoServicio vistaEstadoServicio, frmServicios vistaServicios, frmActualizarServicio vistaActualizarServicio, frmSoluciones vistaSoluciones, frmNuevoUsuario vistaUsuarioNuevo, Plantilla laPlantillaxD, obtenerDatosTablas modeloTablas, procedimientoSQL procedimientosAlmacenados, sqlModelos conexion)
+        public manejoProgramaControl(frmAgregarEdificioOficina VistaEdificioOficina,frmInicioSesion vistaInicioSesion, frmAdministrador vistaAdministrador, frmTecnico vistaTecnico, frmCliente vistaCliente, frmSolicitarServicio vistaSolicitarServicio, frmEstadoServicio vistaEstadoServicio, frmServicios vistaServicios, frmActualizarServicio vistaActualizarServicio, frmSoluciones vistaSoluciones, frmNuevoUsuario vistaUsuarioNuevo, Plantilla laPlantillaxD, obtenerDatosTablas modeloTablas, procedimientoSQL procedimientosAlmacenados, sqlModelos conexion)
         {
             VistaInicioSesion = vistaInicioSesion;
             VistaAdministrador = vistaAdministrador;
@@ -42,6 +44,9 @@ namespace BaseDatosProyecto.controlador
             VistaActualizarServicio = vistaActualizarServicio;
             VistaSoluciones = vistaSoluciones;
             VistaUsuarioNuevo = vistaUsuarioNuevo;
+           
+
+
             this.laPlantillaxD = laPlantillaxD;
             this.modeloTablas = modeloTablas;
             this.procedimientosAlmacenados = procedimientosAlmacenados;
@@ -59,6 +64,7 @@ namespace BaseDatosProyecto.controlador
             vistaAdministrador.btnActualizar.Click += clickBoton;
             vistaAdministrador.btnSoluciones.Click += clickBoton;
             vistaAdministrador.btnNuevoUsuario.Click += clickBoton;
+            vistaAdministrador.btnAgregarEdificio.Click += clickBoton;
 
             //Botones Vista Tecnico
             vistaTecnico.btnServicios.Click += clickBoton;
@@ -84,31 +90,37 @@ namespace BaseDatosProyecto.controlador
 
         private void clickBoton(object sender, EventArgs e)
         {
-
-            //Vista Inicio sesion ya con sus respectivas funciones
+            // Vista Inicio sesión ya con sus respectivas funciones
             if (sender == VistaInicioSesion.btnIniciarSesion)
             {
                 sqlModelos.Miconexion.user = VistaInicioSesion.txtUsuario.Text;
                 sqlModelos.Miconexion.pass = VistaInicioSesion.txtContraseña.Text;
                 sqlModelos.Miconexion.abrir_conexion();
 
-                System.Data.ConnectionState estadoCOnexion = sqlModelos.Miconexion.ObtenerEstadoConexion();
-
+                System.Data.ConnectionState estadoConexion = sqlModelos.Miconexion.ObtenerEstadoConexion();
 
                 VistaInicioSesion.Hide();
-                if (estadoCOnexion == System.Data.ConnectionState.Open)
+
+                if (estadoConexion == System.Data.ConnectionState.Open)
                 {
-                    if (sqlModelos.Miconexion.ObtenerRol(VistaInicioSesion.txtUsuario.Text) == "Administrador")
-                    { VistaAdministrador.ShowDialog(); }
+                    string rolUsuario = sqlModelos.Miconexion.ObtenerRol(VistaInicioSesion.txtUsuario.Text);
 
-                    else if (sqlModelos.Miconexion.ObtenerRol(VistaInicioSesion.txtUsuario.Text) == "Tecnico")
-                    { VistaTecnico.ShowDialog(); }
-
-                    else if (sqlModelos.Miconexion.ObtenerRol(VistaInicioSesion.txtUsuario.Text) == "Cliente")
-                    { VistaCliente.ShowDialog(); }
-
+                    if (rolUsuario == "Cliente")
+                    {
+                        VistaCliente.ShowDialog();
+                    }
+                    else if (rolUsuario == "Tecnico")
+                    {
+                        VistaTecnico.ShowDialog();
+                    }
+                    else if (rolUsuario == "Administrador")
+                    {
+                        VistaAdministrador.ShowDialog();
+                    }
                     else
-                    { MessageBox.Show("El usuario no existe"); }
+                    {
+                        MessageBox.Show("El usuario no existe");
+                    }
                 }
                 else
                 {
@@ -149,6 +161,9 @@ namespace BaseDatosProyecto.controlador
 
             if (sender == VistaAdministrador.btnSolicitarServicio) 
             { AbrirForm(new frmSolicitarServicio()); }
+
+            if(sender == VistaAdministrador.btnAgregarEdificio) 
+            { AbrirForm(new frmAgregarEdificioOficina()); }
 
 
         }

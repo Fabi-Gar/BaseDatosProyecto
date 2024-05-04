@@ -68,6 +68,12 @@
     <Compile Include="vista\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\VistasBotones\frmAgregarEdificioOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\VistasBotones\frmAgregarEdificioOficina.Designer.cs">
+      <DependentUpon>frmAgregarEdificioOficina.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\VistasBotones\frmEstadoServicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <EmbeddedResource Include="vista\VistasBotones\frmActualizarServicio.resx">
       <DependentUpon>frmActualizarServicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\VistasBotones\frmAgregarEdificioOficina.resx">
+      <DependentUpon>frmAgregarEdificioOficina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\VistasBotones\frmEstadoServicio.resx">
       <DependentUpon>frmEstadoServicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +185,7 @@
   <ItemGroup>
     <Content Include="imagenes\ActualizarServicio.png" />
     <Content Include="imagenes\cerrar.png" />
+    <Content Include="imagenes\EdificioIcono.png" />
     <Content Include="imagenes\estadoServicio.png" />
     <Content Include="imagenes\imagenServicio.png" />
     <Content Include="imagenes\IniciarSesion.png" />
