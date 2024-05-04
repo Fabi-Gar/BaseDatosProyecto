@@ -112,9 +112,11 @@
     </Compile>
     <Compile Include="vista\Plantilla.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="vista\Plantilla.Designer.cs">
       <DependentUpon>Plantilla.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,6 +134,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Plantilla.resx">
       <DependentUpon>Plantilla.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
