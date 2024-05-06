@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseDatosProyecto.modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,9 @@ namespace BaseDatosProyecto.vista
 
         private void frmEstadoServicio_Load(object sender, EventArgs e)
         {
+            obtenerDatosTablas datos = new obtenerDatosTablas();
+            DataTable dataTable = datos.VerServiciosSolicitadosPorUsuario(sqlModelos.Miconexion.dpi);
+            dtServicios.DataSource = dataTable;
 
         }
     }

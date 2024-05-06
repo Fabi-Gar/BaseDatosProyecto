@@ -76,7 +76,7 @@ namespace BaseDatosProyecto.controlador
             vistaCliente.btnEstadoServicio.Click += clickBoton;
         }
 
-        private void AbrirForm(object formHeredado)
+        private void AbrirFormAdmin(object formHeredado)
         {
             if (VistaAdministrador.PanelCentral.Controls.Count > 0) VistaAdministrador.PanelCentral.Controls.RemoveAt(0);
             Form fr = formHeredado as Form;
@@ -87,24 +87,52 @@ namespace BaseDatosProyecto.controlador
             fr.Show(); 
         }
 
+        private void AbrirFormUsuario(object formHeredado)
+        {
+            if (VistaCliente.PanelCentral.Controls.Count > 0) VistaCliente.PanelCentral.Controls.RemoveAt(0);
+            Form fr = formHeredado as Form;
+            fr.TopLevel = false;
+            fr.Dock = DockStyle.Fill;
+            VistaCliente.PanelCentral.Controls.Add(fr);
+            VistaCliente.PanelCentral.Tag = fr;
+            fr.Show();
+        }
+
+        private void AbrirFormTecnico(object formHeredado)
+        {
+            if (VistaTecnico.PanelCentral.Controls.Count > 0) VistaTecnico.PanelCentral.Controls.RemoveAt(0);
+            Form fr = formHeredado as Form;
+            fr.TopLevel = false;
+            fr.Dock = DockStyle.Fill;
+            VistaTecnico.PanelCentral.Controls.Add(fr);
+            VistaTecnico.PanelCentral.Tag = fr;
+            fr.Show();
+        }
+
+
+
 
         private void clickBoton(object sender, EventArgs e)
         {
             // Vista Inicio sesión ya con sus respectivas funciones
             if (sender == VistaInicioSesion.btnIniciarSesion)
             {
-                
+
                 sqlModelos.Miconexion.abrir_conexion();
 
                 System.Data.ConnectionState estadoConexion = sqlModelos.Miconexion.ObtenerEstadoConexion();
 
                 sqlModelos.Miconexion.Rol = sqlModelos.Miconexion.Log_in(VistaInicioSesion.txtUsuario.Text, VistaInicioSesion.txtContraseña.Text);
 
+                sqlModelos.Miconexion.dpi = sqlModelos.Miconexion.DpiUsuario(VistaInicioSesion.txtUsuario.Text, VistaInicioSesion.txtContraseña.Text);
+
+                sqlModelos.Miconexion.Usuario = VistaInicioSesion.txtUsuario.Text;
+
                 VistaInicioSesion.Hide();
 
                 if (estadoConexion == System.Data.ConnectionState.Open)
                 {
-                    
+
 
                     if (sqlModelos.Miconexion.Rol == "Cliente")
                     {
@@ -128,43 +156,56 @@ namespace BaseDatosProyecto.controlador
                     Application.Exit();
                 }
 
-
-
-
-
-
             }
             if (sender == VistaInicioSesion.btnCerrar)
             {
                 Application.Exit();
             }
 
+
             //Vista Administrador Funciones
             if (sender == VistaAdministrador.btnNuevoUsuario)
-            {
-                AbrirForm(new frmNuevoUsuario());
-            }
+            { AbrirFormAdmin(new frmNuevoUsuario()); }
 
             if (sender == VistaAdministrador.btnSoluciones)
-            { AbrirForm(new frmSoluciones()); }
+            { AbrirFormAdmin(new frmSoluciones()); }
 
             if (sender == VistaAdministrador.btnSoluciones)
-            { AbrirForm(new frmSoluciones()); }
+            { AbrirFormAdmin(new frmSoluciones()); }
 
             if (sender == VistaAdministrador.btnActualizar)
-            { AbrirForm(new frmActualizarServicio()); }
+            { AbrirFormAdmin(new frmActualizarServicio()); }
 
             if (sender == VistaAdministrador.btnServicios)
-            { AbrirForm(new frmServicios()); }
+            { AbrirFormAdmin(new frmServicios()); }
 
             if (sender == VistaAdministrador.btnEstadoServicio)
-            { AbrirForm(new frmEstadoServicio()); }
+            { AbrirFormAdmin(new frmEstadoServicio()); }
 
-            if (sender == VistaAdministrador.btnSolicitarServicio) 
-            { AbrirForm(new frmSolicitarServicio()); }
+            if (sender == VistaAdministrador.btnSolicitarServicio)
+            { AbrirFormAdmin(new frmSolicitarServicio()); }
 
-            if(sender == VistaAdministrador.btnAgregarEdificio) 
-            { AbrirForm(new frmAgregarEdificioOficina()); }
+            if (sender == VistaAdministrador.btnAgregarEdificio)
+            { AbrirFormAdmin(new frmAgregarEdificioOficina()); }
+
+            //Vista Cliente
+
+            if (sender == VistaCliente.btnSolicitarServicio)
+            { AbrirFormUsuario(new FrnSolicitarServicioCliente()); }
+
+            if (sender == VistaCliente.btnEstadoServicio) 
+            { AbrirFormUsuario(new frmEstadoServicio()); }
+
+            //VistaTecnico
+
+            if (sender == VistaTecnico.btnServicios)
+            { AbrirFormTecnico(new frmServicios()); }
+
+            if (sender == VistaTecnico.btnActualizar)
+            { AbrirFormTecnico(new frmActualizarServicio()); }
+
+            if (sender == VistaTecnico.btnSoluciones)
+            { AbrirFormTecnico(new frmSoluciones()); }
 
 
         }

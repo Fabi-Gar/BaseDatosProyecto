@@ -92,7 +92,7 @@ namespace BaseDatosProyecto.modelo
 
         public DataTable VerTodosServiciosSolicitados()
         {
-            DataTable tablaCuentas = new DataTable();
+            DataTable TablaServicios = new DataTable();
             try
             {
                 Miconexion.abrir_conexion();
@@ -104,7 +104,7 @@ namespace BaseDatosProyecto.modelo
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
-                adapter.Fill(tablaCuentas);
+                adapter.Fill(TablaServicios);
                 Miconexion.conexion.Close();
             }
             catch (SqlException ex)
@@ -112,8 +112,96 @@ namespace BaseDatosProyecto.modelo
                 MessageBox.Show("Algo salió mal: " + ex.Message);
             }
 
-            return tablaCuentas;
+            return TablaServicios;
 
         }
+
+        public DataTable VerServiciosSolicitadosPorUsuario(string DPI)
+        {
+            DataTable tablaServicios = new DataTable();
+            try
+            {
+                Miconexion.abrir_conexion();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "VerServiciosSolicitadosPorUsuario";
+                cmd.Connection = Miconexion.conexion;
+                cmd.Parameters.AddWithValue("@DPI", DPI);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                adapter.Fill(tablaServicios);
+                Miconexion.conexion.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Algo salió mal: " + ex.Message);
+            }
+
+            return tablaServicios;
+        }
+
+        public DataTable VerServiciosPrestados()
+        {
+            DataTable tablaServiciosPrestados = new DataTable();
+            try
+            {
+                Miconexion.abrir_conexion();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "VerServiciosPrestados";
+                cmd.Connection = Miconexion.conexion;
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                adapter.Fill(tablaServiciosPrestados);
+                Miconexion.conexion.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Algo salió mal: " + ex.Message);
+            }
+
+            return tablaServiciosPrestados;
+
+        }
+
+        public DataTable VerServiciosSolicitadosPendientes()
+        {
+            DataTable tablaServiciosPrestados = new DataTable();
+            try
+            {
+                Miconexion.abrir_conexion();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "VerServiciosSolicitadosPendientes";
+                cmd.Connection = Miconexion.conexion;
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                adapter.Fill(tablaServiciosPrestados);
+                Miconexion.conexion.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Algo salió mal: " + ex.Message);
+            }
+
+            return tablaServiciosPrestados;
+
+        }
+
+
+
+
+
+
     }
+
+
+
+
 }

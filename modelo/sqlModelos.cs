@@ -75,6 +75,43 @@ namespace BaseDatosProyecto.modelo
             }
 
 
+            public static string DpiUsuario(string nombreUsuario, string contraseña)
+            {
+                string dpiUsuario = "";
+
+                try
+                {
+                    abrir_conexion();
+
+                    SqlCommand cmd = new SqlCommand("ObtenerDPIUsuario", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@Nombre", nombreUsuario);
+                    cmd.Parameters.AddWithValue("@Contraseña", contraseña);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        dpiUsuario = reader.GetString(reader.GetOrdinal("DPI"));
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (conexion.State == ConnectionState.Open)
+                    {
+                        conexion.Close();
+                    }
+                }
+
+                return dpiUsuario;
+            }
+
+
             public static string Usuario { get; set; }
             public static string Rol { get; set; }
             public static string dpi { get; set; }

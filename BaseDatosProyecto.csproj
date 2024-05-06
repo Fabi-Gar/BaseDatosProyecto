@@ -54,6 +54,12 @@
     <Compile Include="vista\Botones Personalizados\datePickerModificado.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="vista\VistasBotones\FrnSolicitarServicioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\VistasBotones\FrnSolicitarServicioCliente.Designer.cs">
+      <DependentUpon>FrnSolicitarServicioCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\VistasBotones\frmActualizarServicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="vista\VistasBotones\FrnSolicitarServicioCliente.resx">
+      <DependentUpon>FrnSolicitarServicioCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\VistasBotones\frmActualizarServicio.resx">
       <DependentUpon>frmActualizarServicio.cs</DependentUpon>
     </EmbeddedResource>

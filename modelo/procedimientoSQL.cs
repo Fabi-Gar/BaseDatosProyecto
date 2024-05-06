@@ -113,5 +113,35 @@ namespace BaseDatosProyecto.modelo
                 MessageBox.Show("Algo salió mal " + ex.Message);
             }
         }
+
+        public static void AgregarSolucion(string CodServicio, DateTime FechaSolucion, string dpiTecnico, string Solucion)
+        {
+            try
+            {
+                Miconexion.abrir_conexion();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "AgregarServicioPrestado";
+                cmd.Connection = Miconexion.conexion;
+
+
+                cmd.Parameters.Add(new SqlParameter("@CodigoServicio", CodServicio));
+                cmd.Parameters.Add(new SqlParameter("@FechaAtencion", FechaSolucion));
+                cmd.Parameters.Add(new SqlParameter("@TecnicoDPI", dpiTecnico));
+                cmd.Parameters.Add(new SqlParameter("@Solucion", Solucion));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Servicio Agregado Exitosamente");
+                Miconexion.conexion.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Algo salió mal " + ex.Message);
+            }
+        }
+
+
+
+
     }
 }

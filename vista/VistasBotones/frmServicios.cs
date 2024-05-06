@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseDatosProyecto.modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace BaseDatosProyecto.vista
         public frmServicios()
         {
             InitializeComponent();
+        }
+
+        private void frmServicios_Load(object sender, EventArgs e)
+        {
+            obtenerDatosTablas datos = new obtenerDatosTablas();
+            DataTable dataTable = datos.VerTodosServiciosSolicitados();
+            dtServicios.DataSource = dataTable;
         }
     }
 }
