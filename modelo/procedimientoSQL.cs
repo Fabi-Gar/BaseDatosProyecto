@@ -12,7 +12,7 @@ namespace BaseDatosProyecto.modelo
 {
     internal class procedimientoSQL
     {
-        public static void AgregarUsuario(string numDPI, string Apellidos, string Nombre, String NumeroOficina, string Rol)
+        public static void AgregarUsuario(string numDPI, string Apellidos, string Nombre, String NumeroOficina, string Rol, string Contraseña)
         {
             try
             {
@@ -28,7 +28,8 @@ namespace BaseDatosProyecto.modelo
                 cmd.Parameters.Add(new SqlParameter("@Apellidos", Apellidos));
                 cmd.Parameters.Add(new SqlParameter("@Nombre", Nombre));
                 cmd.Parameters.Add(new SqlParameter("@NumeroOficina", NumeroOficina)); 
-                cmd.Parameters.Add(new SqlParameter("@Roles", Rol)); 
+                cmd.Parameters.Add(new SqlParameter("@Roles", Rol));
+                cmd.Parameters.Add(new SqlParameter("@Contraseña", Contraseña));
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Usuario Agregado Exitosamente");

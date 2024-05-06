@@ -27,7 +27,7 @@ namespace BaseDatosProyecto.vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            procedimientoSQL.AgregarUsuario(txtNumeroDPI.Text, txtApellidos.Text, txtNombreUsuario.Text, txtNumOficina.Text, "Tecnico");
+            procedimientoSQL.AgregarUsuario(txtNumeroDPI.Text, txtApellidos.Text, txtNombreUsuario.Text, txtNumOficina.Text, "Tecnico", txtContraseña.Text);
 
             obtenerDatosTablas datos = new obtenerDatosTablas();
             DataTable dataTable = datos.TablaUsuarios();
@@ -37,12 +37,13 @@ namespace BaseDatosProyecto.vista
             txtNombreUsuario.Text = "";
             txtNumeroDPI.Text = "";
             txtNumOficina.Text = "";
+            txtContraseña.Text = "";
         }
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
 
-            procedimientoSQL.AgregarUsuario(txtNumeroDPI.Text, txtApellidos.Text, txtNombreUsuario.Text, txtNumOficina.Text, "Cliente");
+            procedimientoSQL.AgregarUsuario(txtNumeroDPI.Text, txtApellidos.Text, txtNombreUsuario.Text, txtNumOficina.Text, "Cliente",txtContraseña.Text);
 
             obtenerDatosTablas datos = new obtenerDatosTablas();
             DataTable dataTable = datos.TablaUsuarios();
@@ -52,6 +53,7 @@ namespace BaseDatosProyecto.vista
             txtNombreUsuario.Text = "";
             txtNumeroDPI.Text = "";
             txtNumOficina.Text = "";
+            txtContraseña.Text = "";
 
         }
     }

@@ -93,27 +93,28 @@ namespace BaseDatosProyecto.controlador
             // Vista Inicio sesión ya con sus respectivas funciones
             if (sender == VistaInicioSesion.btnIniciarSesion)
             {
-                sqlModelos.Miconexion.user = VistaInicioSesion.txtUsuario.Text;
-                sqlModelos.Miconexion.pass = VistaInicioSesion.txtContraseña.Text;
+                
                 sqlModelos.Miconexion.abrir_conexion();
 
                 System.Data.ConnectionState estadoConexion = sqlModelos.Miconexion.ObtenerEstadoConexion();
+
+                sqlModelos.Miconexion.Rol = sqlModelos.Miconexion.Log_in(VistaInicioSesion.txtUsuario.Text, VistaInicioSesion.txtContraseña.Text);
 
                 VistaInicioSesion.Hide();
 
                 if (estadoConexion == System.Data.ConnectionState.Open)
                 {
-                    string rolUsuario = sqlModelos.Miconexion.ObtenerRol(VistaInicioSesion.txtUsuario.Text);
+                    
 
-                    if (rolUsuario == "Cliente")
+                    if (sqlModelos.Miconexion.Rol == "Cliente")
                     {
                         VistaCliente.ShowDialog();
                     }
-                    else if (rolUsuario == "Tecnico")
+                    else if (sqlModelos.Miconexion.Rol == "Tecnico")
                     {
                         VistaTecnico.ShowDialog();
                     }
-                    else if (rolUsuario == "Administrador")
+                    else if (sqlModelos.Miconexion.Rol == "Administrador")
                     {
                         VistaAdministrador.ShowDialog();
                     }
