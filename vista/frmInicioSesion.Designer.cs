@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnAdministrador = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +56,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.Menu;
             this.txtUsuario.Location = new System.Drawing.Point(75, 142);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(341, 25);
@@ -70,7 +69,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.SystemColors.Menu;
             this.txtContraseña.Location = new System.Drawing.Point(75, 207);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Multiline = true;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
@@ -112,7 +111,7 @@
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
             this.btnIniciarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIniciarSesion.Location = new System.Drawing.Point(75, 294);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(341, 39);
             this.btnIniciarSesion.TabIndex = 5;
@@ -130,30 +129,12 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.Location = new System.Drawing.Point(75, 358);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(341, 39);
             this.btnCerrar.TabIndex = 6;
             this.btnCerrar.Text = "Salir";
             this.btnCerrar.UseVisualStyleBackColor = false;
-            // 
-            // btnAdministrador
-            // 
-            this.btnAdministrador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.btnAdministrador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdministrador.FlatAppearance.BorderSize = 0;
-            this.btnAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(115)))));
-            this.btnAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrador.ForeColor = System.Drawing.Color.White;
-            this.btnAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdministrador.Location = new System.Drawing.Point(371, 450);
-            this.btnAdministrador.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdministrador.Name = "btnAdministrador";
-            this.btnAdministrador.Size = new System.Drawing.Size(97, 35);
-            this.btnAdministrador.TabIndex = 7;
-            this.btnAdministrador.Text = "Admin";
-            this.btnAdministrador.UseVisualStyleBackColor = false;
             // 
             // frmInicioSesion
             // 
@@ -161,7 +142,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(481, 498);
-            this.Controls.Add(this.btnAdministrador);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.label3);
@@ -170,7 +150,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInicioSesion";
@@ -188,6 +168,5 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button btnIniciarSesion;
         public System.Windows.Forms.Button btnCerrar;
-        public System.Windows.Forms.Button btnAdministrador;
     }
 }
