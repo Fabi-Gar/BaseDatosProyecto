@@ -20,7 +20,6 @@ namespace BaseDatosProyecto.controlador
         frmSolicitarServicio VistaSolicitarServicio;
         frmEstadoServicio VistaEstadoServicio;
         frmServicios VistaServicios;
-        frmActualizarServicio VistaActualizarServicio;
         frmSoluciones VistaSoluciones;
         frmNuevoUsuario VistaUsuarioNuevo;
         frmAgregarEdificioOficina VistaEdificioOficina;
@@ -32,7 +31,7 @@ namespace BaseDatosProyecto.controlador
         procedimientoSQL procedimientosAlmacenados;
         sqlModelos conexion;
 
-        public manejoProgramaControl(frmAgregarEdificioOficina VistaEdificioOficina,frmInicioSesion vistaInicioSesion, frmAdministrador vistaAdministrador, frmTecnico vistaTecnico, frmCliente vistaCliente, frmSolicitarServicio vistaSolicitarServicio, frmEstadoServicio vistaEstadoServicio, frmServicios vistaServicios, frmActualizarServicio vistaActualizarServicio, frmSoluciones vistaSoluciones, frmNuevoUsuario vistaUsuarioNuevo, Plantilla laPlantillaxD, obtenerDatosTablas modeloTablas, procedimientoSQL procedimientosAlmacenados, sqlModelos conexion)
+        public manejoProgramaControl(frmAgregarEdificioOficina VistaEdificioOficina,frmInicioSesion vistaInicioSesion, frmAdministrador vistaAdministrador, frmTecnico vistaTecnico, frmCliente vistaCliente, frmSolicitarServicio vistaSolicitarServicio, frmEstadoServicio vistaEstadoServicio, frmServicios vistaServicios, frmSoluciones vistaSoluciones, frmNuevoUsuario vistaUsuarioNuevo, Plantilla laPlantillaxD, obtenerDatosTablas modeloTablas, procedimientoSQL procedimientosAlmacenados, sqlModelos conexion)
         {
             VistaInicioSesion = vistaInicioSesion;
             VistaAdministrador = vistaAdministrador;
@@ -41,7 +40,6 @@ namespace BaseDatosProyecto.controlador
             VistaSolicitarServicio = vistaSolicitarServicio;
             VistaEstadoServicio = vistaEstadoServicio;
             VistaServicios = vistaServicios;
-            VistaActualizarServicio = vistaActualizarServicio;
             VistaSoluciones = vistaSoluciones;
             VistaUsuarioNuevo = vistaUsuarioNuevo;
            
@@ -61,19 +59,20 @@ namespace BaseDatosProyecto.controlador
             vistaAdministrador.btnSolicitarServicio.Click += clickBoton;
             vistaAdministrador.btnEstadoServicio.Click += clickBoton;
             vistaAdministrador.btnServicios.Click += clickBoton;
-            vistaAdministrador.btnActualizar.Click += clickBoton;
+       
             vistaAdministrador.btnSoluciones.Click += clickBoton;
             vistaAdministrador.btnNuevoUsuario.Click += clickBoton;
             vistaAdministrador.btnAgregarEdificio.Click += clickBoton;
 
             //Botones Vista Tecnico
             vistaTecnico.btnServicios.Click += clickBoton;
-            vistaTecnico.btnActualizar.Click += clickBoton;
+           
             vistaTecnico.btnSoluciones.Click += clickBoton;
 
             //Botones Vista Cliente
             vistaCliente.btnSolicitarServicio.Click += clickBoton;
             vistaCliente.btnEstadoServicio.Click += clickBoton;
+
         }
 
         private void AbrirFormAdmin(object formHeredado)
@@ -173,9 +172,6 @@ namespace BaseDatosProyecto.controlador
             if (sender == VistaAdministrador.btnSoluciones)
             { AbrirFormAdmin(new frmSoluciones()); }
 
-            if (sender == VistaAdministrador.btnActualizar)
-            { AbrirFormAdmin(new frmActualizarServicio()); }
-
             if (sender == VistaAdministrador.btnServicios)
             { AbrirFormAdmin(new frmServicios()); }
 
@@ -201,8 +197,7 @@ namespace BaseDatosProyecto.controlador
             if (sender == VistaTecnico.btnServicios)
             { AbrirFormTecnico(new frmServicios()); }
 
-            if (sender == VistaTecnico.btnActualizar)
-            { AbrirFormTecnico(new frmActualizarServicio()); }
+            
 
             if (sender == VistaTecnico.btnSoluciones)
             { AbrirFormTecnico(new frmSoluciones()); }

@@ -26,7 +26,6 @@ namespace BaseDatosProyecto
             frmTecnico vistaTecnico = new frmTecnico();
             frmCliente vistaCliente = new frmCliente();
             Plantilla plantilla = new Plantilla();
-            frmActualizarServicio VistaActualizarServicio = new frmActualizarServicio();
             frmEstadoServicio VistaEstadoServicio = new frmEstadoServicio();
             frmNuevoUsuario VistaNuevoUsuario = new frmNuevoUsuario();
             frmServicios VistaServicios = new frmServicios();
@@ -43,7 +42,7 @@ namespace BaseDatosProyecto
                 manejoProgramaControl(VistaEdificioOficina,vistaInicioSesion,
                 vistaAdministrador,vistaTecnico,vistaCliente,
                 VistaSolicitarServicio,VistaEstadoServicio,VistaServicios,
-                VistaActualizarServicio,VistaSoluciones,VistaNuevoUsuario,
+                VistaSoluciones,VistaNuevoUsuario,
                 plantilla,tablasSql,procedimientoSQL,Conexiones);
 
 

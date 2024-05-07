@@ -33,6 +33,8 @@ namespace BaseDatosProyecto.vista
             DataTable dataTable = datos.TablaUsuarios();
             dtUsuarios.DataSource = dataTable;
 
+
+
             txtApellidos.Text = "";
             txtNombreUsuario.Text = "";
             txtNumeroDPI.Text = "";

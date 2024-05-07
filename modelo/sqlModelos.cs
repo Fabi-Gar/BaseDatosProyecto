@@ -28,14 +28,17 @@ namespace BaseDatosProyecto.modelo
                     {
                         conexion.Open();
                     }
-                    else { MessageBox.Show("error"); }
+                    else {  }
                 }
-                catch (Exception ex) { MessageBox.Show("error " + ex); }
+                catch (Exception ex) { MessageBox.Show("Revise su conexion a internet"); }
             }
 
             public static ConnectionState ObtenerEstadoConexion()
             {
-                return conexion.State;
+              
+                    return conexion.State;
+               
+               
             }
 
             public static string Log_in(string nombreUsuario, string contraseña)
@@ -61,7 +64,7 @@ namespace BaseDatosProyecto.modelo
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Usuario u Contraseña Incorrectos");
                 }
                 finally
                 {

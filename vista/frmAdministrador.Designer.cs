@@ -42,33 +42,32 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(1674, 9);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(5);
             // 
             // btnMinimizar
             // 
             this.btnMinimizar.Location = new System.Drawing.Point(1592, 9);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(5);
             // 
             // btnMaximizar
             // 
             this.btnMaximizar.Location = new System.Drawing.Point(1633, 9);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(5);
             // 
             // BarraSuperior
             // 
-            this.BarraSuperior.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BarraSuperior.Margin = new System.Windows.Forms.Padding(5);
             this.BarraSuperior.Size = new System.Drawing.Size(1712, 47);
             // 
             // MenuVertical
             // 
             this.MenuVertical.Controls.Add(this.btnAgregarEdificio);
             this.MenuVertical.Controls.Add(this.label1);
-            this.MenuVertical.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.MenuVertical.Margin = new System.Windows.Forms.Padding(5);
             this.MenuVertical.Size = new System.Drawing.Size(293, 705);
             this.MenuVertical.Controls.SetChildIndex(this.btnSolicitarServicio, 0);
             this.MenuVertical.Controls.SetChildIndex(this.btnEstadoServicio, 0);
             this.MenuVertical.Controls.SetChildIndex(this.btnServicios, 0);
-            this.MenuVertical.Controls.SetChildIndex(this.btnActualizar, 0);
             this.MenuVertical.Controls.SetChildIndex(this.btnSoluciones, 0);
             this.MenuVertical.Controls.SetChildIndex(this.btnNuevoUsuario, 0);
             this.MenuVertical.Controls.SetChildIndex(this.label1, 0);
@@ -76,7 +75,7 @@
             // 
             // PanelCentral
             // 
-            this.PanelCentral.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.PanelCentral.Margin = new System.Windows.Forms.Padding(5);
             this.PanelCentral.Size = new System.Drawing.Size(1419, 705);
             // 
             // btnSolicitarServicio
@@ -86,8 +85,8 @@
             // 
             // btnRestaurar
             // 
-            this.btnRestaurar.Location = new System.Drawing.Point(1034, 9);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnRestaurar.Location = new System.Drawing.Point(1013, 9);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(5);
             // 
             // btnEstadoServicio
             // 
@@ -99,11 +98,6 @@
             this.btnSoluciones.FlatAppearance.BorderSize = 0;
             this.btnSoluciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(115)))));
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(115)))));
-            // 
             // btnServicios
             // 
             this.btnServicios.FlatAppearance.BorderSize = 0;
@@ -113,7 +107,7 @@
             // 
             this.btnNuevoUsuario.FlatAppearance.BorderSize = 0;
             this.btnNuevoUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(115)))));
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(4, 599);
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(4, 525);
             // 
             // label1
             // 
@@ -137,7 +131,7 @@
             this.btnAgregarEdificio.ForeColor = System.Drawing.Color.White;
             this.btnAgregarEdificio.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarEdificio.Image")));
             this.btnAgregarEdificio.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarEdificio.Location = new System.Drawing.Point(0, 503);
+            this.btnAgregarEdificio.Location = new System.Drawing.Point(0, 431);
             this.btnAgregarEdificio.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarEdificio.Name = "btnAgregarEdificio";
             this.btnAgregarEdificio.Size = new System.Drawing.Size(293, 75);
@@ -151,7 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1712, 752);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmAdministrador";
             this.Text = "frmAdministrador";
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();

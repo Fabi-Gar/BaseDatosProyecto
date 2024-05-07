@@ -60,12 +60,6 @@
     <Compile Include="vista\VistasBotones\FrnSolicitarServicioCliente.Designer.cs">
       <DependentUpon>FrnSolicitarServicioCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\VistasBotones\frmActualizarServicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\VistasBotones\frmActualizarServicio.Designer.cs">
-      <DependentUpon>frmActualizarServicio.cs</DependentUpon>
-    </Compile>
     <Compile Include="vista\frmAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,9 +158,6 @@
     </Compile>
     <EmbeddedResource Include="vista\VistasBotones\FrnSolicitarServicioCliente.resx">
       <DependentUpon>FrnSolicitarServicioCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\VistasBotones\frmActualizarServicio.resx">
-      <DependentUpon>frmActualizarServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\VistasBotones\frmAgregarEdificioOficina.resx">
       <DependentUpon>frmAgregarEdificioOficina.cs</DependentUpon>
