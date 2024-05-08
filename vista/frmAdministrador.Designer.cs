@@ -85,7 +85,7 @@
             // 
             // btnRestaurar
             // 
-            this.btnRestaurar.Location = new System.Drawing.Point(1013, 9);
+            this.btnRestaurar.Location = new System.Drawing.Point(1633, 9);
             this.btnRestaurar.Margin = new System.Windows.Forms.Padding(5);
             // 
             // btnEstadoServicio

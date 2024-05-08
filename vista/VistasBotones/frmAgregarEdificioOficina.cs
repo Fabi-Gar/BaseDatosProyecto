@@ -46,7 +46,7 @@ namespace BaseDatosProyecto.vista.VistasBotones
         {
             procedimientoSQL.AgregarOficina(txtOficina.Text, txtNombreOficina.Text, txtNombreEdificio.Text);
             obtenerDatosTablas datos = new obtenerDatosTablas();
-            DataTable dataTable = datos.TablaEdificios();
+            DataTable dataTable = datos.TablaOficinas();
             dtOficinas.DataSource = dataTable;
 
             txtOficina.Text = "";

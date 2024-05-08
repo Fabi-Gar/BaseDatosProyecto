@@ -49,7 +49,7 @@ namespace BaseDatosProyecto.modelo
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "CrearUsuario";
+                cmd.CommandText = "AgregarEdificio";
                 cmd.Connection = Miconexion.conexion;
 
             
@@ -76,7 +76,7 @@ namespace BaseDatosProyecto.modelo
                 cmd.Connection = Miconexion.conexion;
 
                 
-                cmd.Parameters.Add(new SqlParameter("@NumeroOficina", nomOficina));
+                cmd.Parameters.Add(new SqlParameter("@NumeroOficina", numOficina));
                 cmd.Parameters.Add(new SqlParameter("@NombreOficina", nomOficina));
                 cmd.Parameters.Add(new SqlParameter("@NombreEdificio", nomEdificio));
                 cmd.ExecuteNonQuery();

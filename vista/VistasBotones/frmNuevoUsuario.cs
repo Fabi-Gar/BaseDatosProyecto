@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BaseDatosProyecto.vista
 {
@@ -56,6 +57,21 @@ namespace BaseDatosProyecto.vista
             txtNumeroDPI.Text = "";
             txtNumOficina.Text = "";
             txtContraseña.Text = "";
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNombreUsuario.Text = (string)dtUsuarios.Rows[e.RowIndex].Cells[2].Value;
+            txtApellidos.Text = (string)dtUsuarios.Rows[e.RowIndex].Cells[1].Value;
+            txtContraseña.Text = (string)dtUsuarios.Rows[e.RowIndex].Cells[5].Value;
+            txtNumeroDPI.Text = (string)dtUsuarios.Rows[e.RowIndex].Cells[0].Value;
+            txtNumOficina.Text = (string)dtUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString();
 
         }
     }
