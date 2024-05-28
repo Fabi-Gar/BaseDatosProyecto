@@ -101,7 +101,7 @@ namespace BaseDatosProyecto.modelo
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    Console.Write(ex);
                 }
                 finally
                 {

@@ -148,6 +148,7 @@ namespace BaseDatosProyecto.controlador
                     else
                     {
                         MessageBox.Show("El usuario no existe");
+                        Application.Exit();
                     }
                 }
                 else
