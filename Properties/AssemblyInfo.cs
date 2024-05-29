@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("BaseDatosProyecto")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Servicios Control")]
+[assembly: AssemblyDescription("Permite el manejo de servicios realizados por Edificios y oficinas")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BaseDatosProyecto")]
+[assembly: AssemblyCompany("FB company")]
+[assembly: AssemblyProduct("Servicios Control")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("fg Company")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 
